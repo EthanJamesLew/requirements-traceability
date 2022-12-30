@@ -1,12 +1,40 @@
 /**
 @page Requirements
 
-@section Build1
+@section FORMATTING 
 
-@anchor SRTX_1113
-<a href="https://foo.bar.com/mantis/view.php?id=1113">SRTX-1113</a>
+This specifies how Conway's Game of Life is rendered to the user.
 
-@anchor SRTX_1114
-<a href="https://foo.bar.com/mantis/view.php?id=1114">SRTX-1114</a>
+@anchor REQ_FMT01
+@req{FMT01}
+The cellular automata grid shall be rendered to stdout.
+
+@anchor REQ_FMT02
+@req{FMT02}
+The cellular automata grid shall updated automatically in uniform time increments.
+
+@anchor REQ_FMT03
+@req{FMT03}
+Empty cells shall render as whitepsace characters.
+
+@section CELLULAR
+
+This specifies Conway's Game of Life update rules.
+
+@anchor REQ_CELL01
+@req{CELL01}
+Any live cell with fewer than two live neighbours dies, as if by underpopulation.
+
+@anchor REQ_CELL02
+@req{CELL02}
+Any live cell with two or three live neighbours lives on to the next generation.
+
+@anchor REQ_CELL03
+@req{CELL03}
+Any live cell with more than three live neighbours dies, as if by overpopulation.
+
+@anchor REQ_CELL04
+@req{CELL04}
+Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 */

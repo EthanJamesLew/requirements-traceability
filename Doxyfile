@@ -32,7 +32,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "My Project"
+PROJECT_NAME           = "Game of Life Example"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -132,10 +132,7 @@ ABBREVIATE_BRIEF       = "The $name class" \
                          is \
                          provides \
                          specifies \
-                         contains \
-                         represents \
-                         a \
-                         an \
+                         contains \My Project
                          the
 
 # If the ALWAYS_DETAILED_SEC and REPEAT_BRIEF tags are both set to YES then
@@ -270,7 +267,7 @@ TAB_SIZE               = 4
 # a double escape (\\{ and \\})
 
 # ELEW - I added this from here: https://stackoverflow.com/questions/537043/custom-tags-with-doxygen
-ALIASES += req{1}="\ref SRTX_\1 \"SRTX-\1\" "
+ALIASES += req{1}="\ref REQ_\1 \"REQ-\1\" "
 ALIASES += satisfy{1}="\xrefitem satisfy \"Satisfies requirement\" \"Requirement Implementation\" \1"
 ALIASES += verify{1}="\xrefitem verify \"Verifies requirement\" \"Requirement Verification\" \1"
 
@@ -488,7 +485,7 @@ NUM_PROC_THREADS       = 1
 # normally produced when WARNINGS is set to YES.
 # The default value is: NO.
 
-EXTRACT_ALL            = YES
+EXTRACT_ALL            = YES 
 
 # If the EXTRACT_PRIVATE tag is set to YES, all private members of a class will
 # be included in the documentation.
@@ -1065,7 +1062,8 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the doxygen output.
 
-USE_MDFILE_AS_MAINPAGE =
+# ELEW - add this
+USE_MDFILE_AS_MAINPAGE = README.md
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
